@@ -1,19 +1,48 @@
-# Real AI Engineering
+# ToolMesh
 
-Welcome to **Real AI Engineering** – a collective of engineers, researchers, and enthusiasts building the next generation of AI-powered agents and automation systems.
+An agent-native AI engineering lab.
 
-## Mission
+**Tagline:** Prompts → Proof
 
-We believe in open collaboration and the democratization of AI. Our mission is to develop, share, and promote best practices for constructing intelligent agents that can reason, plan, and act in the real world. We curate tools, frameworks, and research to accelerate innovation and help individuals and organizations harness the power of large language models and multi-agent systems.
+## What we’re building
 
-## What We Do
+Most engineering workflows and tooling were designed for humans. When the *executor* becomes an AI agent, we need new primitives:
 
-- **Curated resources:** We maintain repositories like [awesome-ai-agents](https://github.com/Real-AI-Engineering/awesome-ai-agents) that collect and categorize the best open-source frameworks, papers, and tutorials for AI agent development.
-- **Community Projects:** We experiment with multi-agent orchestration, memory management, planning algorithms, and integration with external tools and APIs.
-- **Education & Outreach:** We share insights, guidelines, and templates to help new builders get started with AI agents. We also host discussions and community events to inspire collaboration.
+- **Machine-readable work contracts** (inputs/outputs, constraints, acceptance gates)
+- **Replayable evidence** (what happened, why it’s safe, how to verify)
+- **Tool interoperability** (glue around existing models/runtimes, not “new models”)
 
-## Get Involved
+ToolMesh is our umbrella for experiments, open-source components, and productized delivery that make agents reliable at enterprise quality.
 
-We welcome contributions of code, documentation, research links, and ideas. To contribute, fork one of our repositories or open an issue to start a conversation. Whether you're an experienced engineer or just curious about agentic AI, there's a place for you in our community.
+## Flagship wedge (v0)
 
-✨ **Together, let's build AI that empowers everyone.**
+**ReceiptCI / Proofpack** — a proof-carrying CI gate for agent work.
+
+Every agent change ships with a **work contract** + **receipts** (evidence) + a **replay path** CI can verify deterministically.
+
+## How we work (lab → product)
+
+We ship small “test rigs” through the same agent-first flow, then productize the reusable parts:
+
+```mermaid
+flowchart LR
+  A["Work Contract (spec)"] --> B["Agent Execution (tools)"]
+  B --> C["Receipts (evidence)"]
+  C --> D["CI Replay/Verify"]
+  D --> E["Ship + Observe"]
+```
+
+## What we ship
+
+- **Templates & pipelines** for agent-native delivery
+- **Reference projects** (our “showroom”)
+- **Curated resources**: [awesome-ai-agents](https://github.com/Real-AI-Engineering/awesome-ai-agents)
+- Hub repo + pitch notes: [toolmesh](https://github.com/Real-AI-Engineering/toolmesh)
+
+## Work with us
+
+**Agent-to-Prod Sprint (2–4 weeks)**: we help teams install an agent-first SDLC (contracts, receipts, quality gates) and deliver the first production use-case.
+
+## Contribute
+
+Open issues/PRs in any repo, or start with the showroom hub (coming soon).
