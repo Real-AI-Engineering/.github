@@ -1,48 +1,41 @@
-# ToolMesh
+# heurema
 
-An agent-native AI engineering lab.
+> Craft, not conjuring.
 
-**Tagline:** Prompts → Proof
+Open-source tools that make AI agent workflows auditable, bounded, and trustworthy.
 
-## What we’re building
+## Vision
 
-Most engineering workflows and tooling were designed for humans. When the *executor* becomes an AI agent, we need new primitives:
+AI agents act at machine speed. The discipline to govern them must be built in, not bolted on. heurema builds infrastructure for teams that delegate aggressively and verify everything.
 
-- **Machine-readable work contracts** (inputs/outputs, constraints, acceptance gates)
-- **Replayable evidence** (what happened, why it’s safe, how to verify)
-- **Tool interoperability** (glue around existing models/runtimes, not “new models”)
+## Principles
 
-ToolMesh is our umbrella for experiments, open-source components, and productized delivery that make agents reliable at enterprise quality.
+1. **Discovery before automation.** Find better work, not just faster work.
+2. **Accountability is not delegatable.** Agents execute. Humans own outcomes.
+3. **Context is a product.** Bad context produces confident wrong output.
+4. **Tests are contracts.** If a machine cannot enforce it, it is a suggestion.
+5. **Silent autonomy is a defect.** No audit trail means no work.
+6. **Failure is never silent.** It surfaces immediately and names an owner.
+7. **Open source is a constraint.** If it cannot be reviewed, it does not ship.
 
-## Flagship wedge (v0)
+## Tools
 
-**ReceiptCI / Proofpack** — a proof-carrying CI gate for agent work.
+| Tool | What it does |
+|------|-------------|
+| [sigil](https://github.com/heurema/sigil) | Risk-adaptive development pipeline with adversarial consensus code review |
+| [herald](https://github.com/heurema/herald) | Daily curated news digest — zero API keys, fully local |
+| [proofpack](https://github.com/heurema/proofpack) | Proof-carrying CI gate for AI agent changes |
+| [codex-partner](https://github.com/heurema/codex-partner) | Codex CLI as independent verification alongside Claude Code |
+| [teams-field-guide](https://github.com/heurema/teams-field-guide) | Comprehensive guide to Claude Code multi-agent teams |
+| [emporium](https://github.com/heurema/emporium) | Plugin marketplace — install any tool with one command |
 
-Every agent change ships with a **work contract** + **receipts** (evidence) + a **replay path** CI can verify deterministically.
+## Install
 
-## How we work (lab → product)
-
-We ship small “test rigs” through the same agent-first flow, then productize the reusable parts:
-
-```mermaid
-flowchart LR
-  A["Work Contract (spec)"] --> B["Agent Execution (tools)"]
-  B --> C["Receipts (evidence)"]
-  C --> D["CI Replay/Verify"]
-  D --> E["Ship + Observe"]
+```bash
+claude plugin marketplace add heurema/emporium
+claude plugin install sigil@emporium
 ```
 
-## What we ship
+---
 
-- **Templates & pipelines** for agent-native delivery
-- **Reference projects** (our “showroom”)
-- **Curated resources**: [awesome-ai-agents](https://github.com/Real-AI-Engineering/awesome-ai-agents)
-- Hub repo + pitch notes: [toolmesh](https://github.com/Real-AI-Engineering/toolmesh)
-
-## Work with us
-
-**Agent-to-Prod Sprint (2–4 weeks)**: we help teams install an agent-first SDLC (contracts, receipts, quality gates) and deliver the first production use-case.
-
-## Contribute
-
-Open issues/PRs in any repo, or start with the showroom hub (coming soon).
+*The measure of a heurema tool: when something goes wrong, you know exactly where, and exactly whose call it was.*
