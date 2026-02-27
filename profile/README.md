@@ -25,7 +25,7 @@ AI agents act at machine speed. The discipline to govern them must be built in, 
 | [sigil](https://github.com/heurema/sigil) | Risk-adaptive development pipeline with adversarial consensus code review |
 | [herald](https://github.com/heurema/herald) | Daily curated news digest — zero API keys, fully local |
 | [proofpack](https://github.com/heurema/proofpack) | Proof-carrying CI gate for AI agent changes |
-| [codex-partner](https://github.com/heurema/codex-partner) | Codex CLI as independent verification alongside Claude Code |
+| [arbiter](https://github.com/heurema/arbiter) | Multi-AI orchestrator — Codex CLI + Gemini CLI for review, ask, implement, panel |
 | [teams-field-guide](https://github.com/heurema/teams-field-guide) | Comprehensive guide to Claude Code multi-agent teams |
 | [emporium](https://github.com/heurema/emporium) | Plugin marketplace — install any tool with one command |
 
